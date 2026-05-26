@@ -1,0 +1,8 @@
+D:\111\简版服务器\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+D:\111\简版服务器\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\111\简版服务器\ConsoleApp1\bin\Debug\服务器.exe.config
+D:\111\简版服务器\ConsoleApp1\bin\Debug\服务器.exe
+D:\111\简版服务器\ConsoleApp1\bin\Debug\服务器.pdb
+D:\111\简版服务器\ConsoleApp1\obj\Debug\服务器.exe
+D:\111\简版服务器\ConsoleApp1\obj\Debug\服务器.pdb
+D:\111\简版服务器\ConsoleApp1\bin\Debug\index.html

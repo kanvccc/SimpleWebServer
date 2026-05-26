@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Static Web Server | 简易静态网页服务器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 2rem;
+        }
+        .lang-btn {
+            padding: 6px 14px;
+            border: 1px solid #2196F3;
+            background: #fff;
+            color: #2196F3;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 8px;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: #2196F3;
+            color: #fff;
+        }
+        .en, .zh {
+            display: none;
+        }
+        .container {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #1976D2;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        h2 {
+            color: #444;
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.3rem;
+            border-left: 4px solid #2196F3;
+            padding-left: 10px;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        .info-box {
+            background: #e8f4ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 语言切换按钮 -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+        <button class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
+
+    <div class="container">
+        <!-- 中文内容 -->
+        <div class="zh" style="display:block;">
+            <h1>简易静态网页服务器</h1>
+            <div class="info-box">
+                <p>✅ 服务运行正常 | Simple Static Web Server Running</p>
+            </div>
+
+            <h2>项目介绍</h2>
+            <p>基于 .NET Framework 4.8 开发的轻量静态网页服务器，原生运行于 Windows 系统，<strong>无需额外安装运行环境</strong>，开箱即用。</p>
+            <p>支持内网、IPv6 外网访问，内置防火墙自动管理、管理员自提权、JSON 配置文件，纯控制台 EXE，无多余依赖。</p>
+
+            <h2>核心特性</h2>
+            <ul>
+                <li>原生 .NET Framework 4.8，Win10 / Win11 系统自带，零安装依赖</li>
+                <li>双击自动请求管理员权限，自动放行防火墙端口</li>
+                <li>JSON 格式配置文件，可自定义监听端口、默认启动页</li>
+                <li>自动识别并展示内网 IPv4、公网 IPv6 访问地址</li>
+                <li>关闭程序自动清理防火墙规则，安全整洁</li>
+                <li>支持静态 HTML、JS、CSS、图片等各类静态资源</li>
+            </ul>
+
+            <h2>使用方法</h2>
+            <ul>
+                <li>1. 将 <code>WebServer.exe</code>、<code>config.json</code> 与网页文件放在同一目录</li>
+                <li>2. 双击 <code>WebServer.exe</code>，程序自动提权并启动服务</li>
+                <li>3. 控制台会输出所有可用访问地址，浏览器可直接访问</li>
+                <li>4. 关闭控制台窗口即可停止服务，自动清理防火墙</li>
+            </ul>
+
+            <h2>配置说明 (config.json)</h2>
+            <p>Port：监听端口，默认 8888</p>
+            <p>StartPage：默认启动页面，默认 index.html</p>
+        </div>
+
+        <!-- 英文内容 -->
+        <div class="en">
+            <h1>Simple Static Web Server</h1>
+            <div class="info-box">
+                <p>✅ Service Running Normally | 简易静态网页服务器运行中</p>
+            </div>
+
+            <h2>Project Introduction</h2>
+            <p>A lightweight static web server built on .NET Framework 4.8. Natively supported by Windows, <strong>no extra runtime required</strong>, ready to use out of the box.</p>
+            <p>Supports LAN and IPv6 external network access. Built-in automatic firewall management, auto admin elevation and JSON configuration. Pure console EXE with zero redundant dependencies.</p>
+
+            <h2>Features</h2>
+            <ul>
+                <li>Based on .NET Framework 4.8, pre-installed on Win10 / Win11</li>
+                <li>Auto request administrator privileges and open firewall port</li>
+                <li>Standard JSON config file, customize port & default page</li>
+                <li>Auto display LAN IPv4 and public IPv6 address</li>
+                <li>Auto clean firewall rules after exit</li>
+                <li>Fully support HTML, JS, CSS, images and other static files</li>
+            </ul>
+
+            <h2>How to Use</h2>
+            <ul>
+                <li>1. Put <code>WebServer.exe</code>, <code>config.json</code> and web files in the same folder</li>
+                <li>2. Double-click <code>WebServer.exe</code>, it will auto elevate and start service</li>
+                <li>3. All available access addresses are shown in console</li>
+                <li>4. Close console window to stop service, firewall rules will be removed automatically</li>
+            </ul>
+
+            <h2>Configuration (config.json)</h2>
+            <p>Port: Listen port, default 8888</p>
+            <p>StartPage: Default homepage, default index.html</p>
+        </div>
+    </div>
+
+    <div class="footer zh" style="display:block;">
+        <p>Open Source Project | GitHub 开源项目</p>
+    </div>
+    <div class="footer en">
+        <p>Open Source Project | GitHub Repository</p>
+    </div>
+
+    <script>
+        // 语言切换逻辑
+        function switchLang(lang) {
+            const zhDom = document.querySelectorAll('.zh');
+            const enDom = document.querySelectorAll('.en');
+            const btns = document.querySelectorAll('.lang-btn');
+
+            if(lang === 'zh'){
+                zhDom.forEach(el => el.style.display = 'block');
+                enDom.forEach(el => el.style.display = 'none');
+                btns[0].classList.add('active');
+                btns[1].classList.remove('active');
+                document.documentElement.lang = "zh-CN";
+            }else{
+                zhDom.forEach(el => el.style.display = 'none');
+                enDom.forEach(el => el.style.display = 'block');
+                btns[0].classList.remove('active');
+                btns[1].classList.add('active');
+                document.documentElement.lang = "en";
+            }
+        }
+    </script>
+</body>
+</html>

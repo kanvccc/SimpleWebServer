@@ -1,0 +1,8 @@
+D:\111\简版服务器\ConsoleApp1\bin\Debug\index.html
+D:\111\简版服务器\ConsoleApp1\obj\Debug\SimpleWebServer.csproj.AssemblyReference.cache
+D:\111\简版服务器\ConsoleApp1\obj\Debug\SimpleWebServer.csproj.CoreCompileInputs.cache
+D:\111\简版服务器\ConsoleApp1\bin\Debug\SimpleWebServer.exe.config
+D:\111\简版服务器\ConsoleApp1\bin\Debug\SimpleWebServer.exe
+D:\111\简版服务器\ConsoleApp1\bin\Debug\SimpleWebServer.pdb
+D:\111\简版服务器\ConsoleApp1\obj\Debug\SimpleWebServer.exe
+D:\111\简版服务器\ConsoleApp1\obj\Debug\SimpleWebServer.pdb
